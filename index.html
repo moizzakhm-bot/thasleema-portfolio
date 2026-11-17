@@ -233,7 +233,7 @@
     </section>
 
     <!-- TECHNICAL SKILLS SECTION -->
-    <section id="skills" class="section-padding" style="background: rgba(255, 255, 255, 0.6);">
+    <section id="skills" class="section-padding">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Technical Competencies</span>
@@ -437,19 +437,19 @@
               </div>
 
               <div class="diagram-row" style="margin-top: 1rem;">
-                <div class="diagram-node" style="background: #FDF2F8; border-color: #EC4899;">
+                <div class="diagram-node" style="border-color: #EC4899;">
                   <span class="node-icon">📦</span>
                   <div class="node-title">Dockerized Apps</div>
                   <div class="node-sub">Private Subnet (EC2 / ASG)</div>
                 </div>
                 <div class="diagram-connector">➔</div>
-                <div class="diagram-node" style="background: #EFF6FF; border-color: #3B82F6;">
+                <div class="diagram-node" style="border-color: #3B82F6;">
                   <span class="node-icon">🗄️</span>
                   <div class="node-title">Amazon RDS Multi-AZ</div>
                   <div class="node-sub">Isolated Subnet &bull; Automated Backup</div>
                 </div>
                 <div class="diagram-connector">➔</div>
-                <div class="diagram-node" style="background: #F0FDF4; border-color: #10B981;">
+                <div class="diagram-node" style="border-color: #10B981;">
                   <span class="node-icon">🪣</span>
                   <div class="node-title">S3 Static Assets</div>
                   <div class="node-sub">CloudFront CDN &bull; Fast Cache</div>
@@ -523,7 +523,7 @@
     </section>
 
     <!-- LIVE CLOUD TERMINAL SECTION -->
-    <section id="terminal" class="section-padding" style="background: rgba(248, 250, 252, 0.6);">
+    <section id="terminal" class="section-padding">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Recruiter Interactive Console</span>
@@ -620,10 +620,6 @@
               <button class="btn btn-primary btn-sm view-project-btn" data-project="project-aws">
                 Architecture Specs
               </button>
-              <a href="https://github.com/Thasleema-Nasreen" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" title="View Source on GitHub">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                GitHub &rarr;
-              </a>
             </div>
           </div>
 
@@ -662,9 +658,47 @@
               <button class="btn btn-primary btn-sm view-project-btn" data-project="project-obs">
                 Architecture Specs
               </button>
-              <a href="https://github.com/Thasleema-Nasreen" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" title="View Source on GitHub">
+            </div>
+          </div>
+
+          <!-- Project 3: Real Estate Platform -->
+          <div class="project-card" data-category="fullstack cloud">
+            <div class="project-card-header">
+              <span class="project-category-badge">Full-Stack &bull; Cloud Deployment</span>
+              <h3 class="project-title">Cloud-Native Real Estate Platform</h3>
+            </div>
+            <p class="project-summary">
+              Developed a full-stack real estate platform to streamline property discovery and management. Built RESTful APIs with MongoDB Atlas persistence and architected a production AWS deployment hosting the React build on S3 and Node.js on EC2.
+            </p>
+            <div class="project-metrics-box">
+              <div class="metric-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Decoupled S3 Frontend &amp; EC2 Backend</span>
+              </div>
+              <div class="metric-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>REST API Microservices with MongoDB Atlas</span>
+              </div>
+              <div class="metric-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Nginx Reverse Proxy &amp; Public Access</span>
+              </div>
+            </div>
+            <div class="project-tags-footer">
+              <span class="ptag">AWS S3</span>
+              <span class="ptag">AWS EC2</span>
+              <span class="ptag">Node.js</span>
+              <span class="ptag">React.js</span>
+              <span class="ptag">MongoDB Atlas</span>
+              <span class="ptag">Nginx</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-primary btn-sm view-project-btn" data-project="project-estate">
+                Architecture Specs
+              </button>
+              <a href="https://github.com/Thasleema-Nasreen1/Real-Estate-Platform" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" title="View Real Estate Platform on GitHub">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                GitHub &rarr;
+                GitHub Repo &rarr;
               </a>
             </div>
           </div>
@@ -716,7 +750,7 @@
     </section>
 
     <!-- PROFESSIONAL EXPERIENCE SECTION -->
-    <section id="experience" class="section-padding" style="background: rgba(255, 255, 255, 0.7);">
+    <section id="experience" class="section-padding">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Work History</span>
@@ -1022,14 +1056,14 @@
                 </div>
               </div>
 
-              <div class="contact-item" style="background: linear-gradient(135deg, #FFF1F2, #FAF5FF); border-color: rgba(244, 63, 94, 0.4);">
-                <div class="contact-item-icon" style="background: #E11D48; color: #FFFFFF;">
+              <div class="contact-item" style="background: rgba(251, 113, 133, 0.08); border-color: rgba(251, 113, 133, 0.35);">
+                <div class="contact-item-icon" style="background: var(--primary); color: #FFFFFF;">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
                 </div>
                 <div class="contact-item-details">
                   <div class="contact-item-label">Verified Resume</div>
                   <div class="contact-item-val">
-                    <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" style="color: #E11D48; font-weight: 800;">Download Original CV (PDF) &darr;</a>
+                    <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" style="color: var(--primary); font-weight: 800;">Download Original CV (PDF) &darr;</a>
                   </div>
                 </div>
               </div>
@@ -1039,8 +1073,8 @@
 
           <!-- Contact Form -->
           <div class="contact-right">
-            <h4 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem; color: #0F172A;">Send an Immediate Message</h4>
-            <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 1.5rem;">Fill out this quick form or email me directly. I will get back to you within 24 hours.</p>
+            <h4 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">Send an Immediate Message</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.5rem;">Fill out this quick form or email me directly. I will get back to you within 24 hours.</p>
 
             <form id="contactForm" class="contact-form">
               <div class="form-group">

@@ -308,17 +308,17 @@ document.addEventListener('DOMContentLoaded', () => {
         modalContent.innerHTML = `
           <div style="margin-bottom: 1.5rem;">
             <span class="pill pill-rose" style="margin-bottom: 0.75rem;">${data.subtitle}</span>
-            <h2 style="font-size: 1.75rem; font-weight: 800; color: #0F172A; margin: 0.5rem 0;">${data.title}</h2>
-            <div style="font-size: 0.88rem; color: #E11D48; font-weight: 600; font-family: var(--font-mono);">${data.architecture}</div>
+            <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin: 0.5rem 0;">${data.title}</h2>
+            <div style="font-size: 0.88rem; color: var(--primary); font-weight: 600; font-family: var(--font-mono);">${data.architecture}</div>
           </div>
-          <div style="margin-bottom: 1.75rem; color: #334155; line-height: 1.7;">
+          <div style="margin-bottom: 1.75rem; color: var(--text-secondary); line-height: 1.7;">
             ${data.overview}
           </div>
-          <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; color: #0F172A;">Technical Implementation & Impact:</h4>
+          <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Technical Implementation & Impact:</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 2rem;">
-            ${data.highlights.map(h => `<li style="position: relative; padding-left: 1.5rem; font-size: 0.93rem; color: #475569; line-height: 1.6;"><span style="position: absolute; left: 0; color: #E11D48; font-weight: bold;">✔</span> ${h}</li>`).join('')}
+            ${data.highlights.map(h => `<li style="position: relative; padding-left: 1.5rem; font-size: 0.93rem; color: var(--text-secondary); line-height: 1.6;"><span style="position: absolute; left: 0; color: var(--primary); font-weight: bold;">✔</span> ${h}</li>`).join('')}
           </ul>
-          <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; color: #0F172A;">Technologies Used:</h4>
+          <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Technologies Used:</h4>
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
             ${data.techStack.map(t => `<span class="tech-tag">${t}</span>`).join('')}
           </div>
