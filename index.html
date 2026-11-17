@@ -46,10 +46,10 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="btn btn-outline btn-sm" title="View & Download Original Uploaded CV">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          Original CV
-        </a>
+        <button type="button" class="btn btn-outline btn-sm open-resume-btn" title="View & Download Resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          View CV
+        </button>
         <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
         <button class="nav-toggle" aria-label="Toggle navigation">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -93,10 +93,10 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
                 Launch Cloud CLI
               </a>
-              <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="btn btn-outline" title="Download Original PDF CV">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download Original CV
-              </a>
+              <button type="button" class="btn btn-outline open-resume-btn" title="View & Download Curriculum Vitae">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                View CV
+              </button>
             </div>
 
             <!-- Key Metric Strip -->
@@ -1019,9 +1019,17 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
                 </div>
                 <div class="contact-item-details">
-                  <div class="contact-item-label">Verified Resume</div>
-                  <div class="contact-item-val">
-                    <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" style="color: var(--primary); font-weight: 800;">Download Original CV (PDF) &darr;</a>
+                  <div class="contact-item-label">Verified Curriculum Vitae</div>
+                  <div class="contact-item-val" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button type="button" class="open-resume-btn" style="background: none; border: none; padding: 0; color: var(--primary); font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.95rem;">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      View CV
+                    </button>
+                    <span style="color: rgba(255,255,255,0.25);">•</span>
+                    <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" style="color: var(--text-muted); font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                      Download PDF &darr;
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1097,6 +1105,38 @@
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
       <div id="modalBodyContent">
         <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME PREVIEW & DOWNLOAD MODAL -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <div class="resume-modal-dialog">
+      <div class="resume-modal-header">
+        <div class="resume-modal-title" id="resumeModalTitle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Curriculum Vitae &bull; Thasleema Nasreen
+        </div>
+        <div class="resume-modal-actions">
+          <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            Open in Tab
+          </a>
+          <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="btn btn-primary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download PDF
+          </a>
+          <button type="button" class="modal-close-btn" id="resumeModalCloseBtn" aria-label="Close CV viewer" style="position: static; margin-left: 0.25rem;">&times;</button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <iframe src="assets/Thasleema_Nasreen_DevOps_Resume.pdf#toolbar=1" class="resume-iframe" title="Resume Preview of Thasleema Nasreen">
+          <p style="padding: 2rem; color: #fff; text-align: center;">
+            Your browser does not support embedded PDF preview.
+            <br><br>
+            <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" class="btn btn-primary">Open Resume in New Tab</a>
+          </p>
+        </iframe>
       </div>
     </div>
   </div>

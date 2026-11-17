@@ -98,13 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
   • <span class="t-accent">contact</span>    : Quick contact info & direct communication
   • <span class="t-accent">clear</span>      : Clear the terminal console`,
 
-    'cv': `<span class="t-success">[ORIGINAL RESUME ATTACHED]</span>
+    'cv': `<span class="t-success">[ORIGINAL RESUME]</span>
   📄 File: Thasleema_Nasreen_DevOps_Resume.pdf
-  👉 <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="t-prompt" style="text-decoration: underline; font-weight: bold;">Click here to open and download original CV PDF</a>`,
+  • <span class="t-prompt" style="font-weight: 700;">Option 1 (View):</span> <a href="javascript:void(0)" onclick="document.querySelector('.open-resume-btn').click()" class="t-prompt" style="text-decoration: underline; font-weight: bold;">Launch Interactive CV Viewer</a>
+  • <span class="t-accent" style="font-weight: 700;">Option 2 (Download):</span> <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="t-accent" style="text-decoration: underline;">Direct Download PDF</a>`,
 
-    'resume': `<span class="t-success">[ORIGINAL RESUME ATTACHED]</span>
+    'resume': `<span class="t-success">[ORIGINAL RESUME]</span>
   📄 File: Thasleema_Nasreen_DevOps_Resume.pdf
-  👉 <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" target="_blank" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="t-prompt" style="text-decoration: underline; font-weight: bold;">Click here to open and download original CV PDF</a>`,
+  • <span class="t-prompt" style="font-weight: 700;">Option 1 (View):</span> <a href="javascript:void(0)" onclick="document.querySelector('.open-resume-btn').click()" class="t-prompt" style="text-decoration: underline; font-weight: bold;">Launch Interactive CV Viewer</a>
+  • <span class="t-accent" style="font-weight: 700;">Option 2 (Download):</span> <a href="assets/Thasleema_Nasreen_DevOps_Resume.pdf" download="Thasleema_Nasreen_DevOps_Resume.pdf" class="t-accent" style="text-decoration: underline;">Direct Download PDF</a>`,
 
     'status': `<span class="t-success">[STATUS] 🚀 ACTIVE & READY FOR ACTION</span>
   • Name: Thasleema Nasreen
@@ -343,7 +345,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Copy to Clipboard Utility with Toast Notification
+  // 6. Interactive Resume Preview & Download Modal
+  const resumeModalOverlay = document.getElementById('resumeModal');
+  const resumeModalCloseBtn = document.getElementById('resumeModalCloseBtn');
+  const openResumeBtns = document.querySelectorAll('.open-resume-btn');
+
+  function openResumeModal() {
+    if (resumeModalOverlay) {
+      resumeModalOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeResumeModal() {
+    if (resumeModalOverlay) {
+      resumeModalOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  openResumeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openResumeModal();
+    });
+  });
+
+  if (resumeModalCloseBtn) {
+    resumeModalCloseBtn.addEventListener('click', closeResumeModal);
+  }
+
+  if (resumeModalOverlay) {
+    resumeModalOverlay.addEventListener('click', (e) => {
+      if (e.target === resumeModalOverlay) {
+        closeResumeModal();
+      }
+    });
+  }
+
+  // Global ESC key listener to close active modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (modalOverlay && modalOverlay.classList.contains('open')) {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      if (resumeModalOverlay && resumeModalOverlay.classList.contains('open')) {
+        closeResumeModal();
+      }
+    }
+  });
+
+  // 7. Copy to Clipboard Utility with Toast Notification
   const copyButtons = document.querySelectorAll('.copy-btn');
   const toastNotice = document.getElementById('toastNotice');
   const toastText = document.getElementById('toastText');
