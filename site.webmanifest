@@ -1,0 +1,20 @@
+{
+  "name": "Thasleema Nasreen | DevOps Engineer & Cloud Infrastructure Specialist",
+  "short_name": "Thasleema TN",
+  "description": "Official engineering portfolio of Thasleema Nasreen, DevOps and Cloud Infrastructure Specialist based in Dubai, UAE.",
+  "icons": [
+    {
+      "src": "assets/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#090D16",
+  "background_color": "#090D16",
+  "display": "standalone"
+}
