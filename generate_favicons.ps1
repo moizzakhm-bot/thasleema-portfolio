@@ -41,18 +41,18 @@ function Generate-FaviconBitmap([int]$size) {
     # Squircle Path
     $margin = 22.0 * $scale
     $rectWidth = 468.0 * $scale
-    $radius = 120.0 * $scale
+    $radius = 122.0 * $scale
     $rect = New-Object System.Drawing.RectangleF($margin, $margin, $rectWidth, $rectWidth)
     $path = New-RoundedRectanglePath $rect $radius
 
-    # Fill Squircle
+    # Fill Squircle (Dark Obsidian Gradient)
     $bgTop = [System.Drawing.Color]::FromArgb(255, 20, 25, 40)
-    $bgBottom = [System.Drawing.Color]::FromArgb(255, 8, 10, 16)
+    $bgBottom = [System.Drawing.Color]::FromArgb(255, 6, 8, 14)
     $bgBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush (New-Object System.Drawing.PointF(0,0)), (New-Object System.Drawing.PointF($size,$size)), $bgTop, $bgBottom
     $g.FillPath($bgBrush, $path)
     $bgBrush.Dispose()
 
-    # Stroke Squircle
+    # Stroke Squircle (Metallic Rose Gold Rim)
     $rimTop = [System.Drawing.Color]::FromArgb(255, 253, 164, 175)
     $rimBottom = [System.Drawing.Color]::FromArgb(255, 225, 29, 72)
     $rimBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush (New-Object System.Drawing.PointF(0,0)), (New-Object System.Drawing.PointF($size,$size)), $rimTop, $rimBottom
@@ -62,62 +62,37 @@ function Generate-FaviconBitmap([int]$size) {
     $rimBrush.Dispose()
     $path.Dispose()
 
-    # Cloud Arc
-    $arcPenWidth = [Math]::Max(1.2, 14.0 * $scale)
-    $arcColor = [System.Drawing.Color]::FromArgb(240, 251, 113, 133)
-    $arcPen = New-Object System.Drawing.Pen $arcColor, $arcPenWidth
-    $arcPen.StartCap = [System.Drawing.Drawing2D.LineCap]::Round
-    $arcPen.EndCap = [System.Drawing.Drawing2D.LineCap]::Round
-
-    # Draw cloud curves via Beziers
-    $g.DrawBezier($arcPen, 
-        [float](146 * $scale), [float](166 * $scale),
-        [float](158 * $scale), [float](132 * $scale),
-        [float](204 * $scale), [float](122 * $scale),
-        [float](236 * $scale), [float](146 * $scale))
-    $g.DrawBezier($arcPen, 
-        [float](236 * $scale), [float](146 * $scale),
-        [float](262 * $scale), [float](114 * $scale),
-        [float](326 * $scale), [float](114 * $scale),
-        [float](352 * $scale), [float](146 * $scale))
-    $g.DrawBezier($arcPen, 
-        [float](352 * $scale), [float](146 * $scale),
-        [float](376 * $scale), [float](140 * $scale),
-        [float](398 * $scale), [float](160 * $scale),
-        [float](394 * $scale), [float](182 * $scale))
-    $arcPen.Dispose()
-
-    # Cloud Telemetry Node
-    $nodeR = [Math]::Max(1.0, 10.0 * $scale)
-    $nodeBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(255, 253, 164, 175))
-    $g.FillEllipse($nodeBrush, [float](394 * $scale - $nodeR), [float](182 * $scale - $nodeR), [float]($nodeR * 2), [float]($nodeR * 2))
-    $nodeBrush.Dispose()
-
-    # Letter Pens
-    $strokeWidth = [Math]::Max(2.0, 44.0 * $scale)
-    $whiteColor = [System.Drawing.Color]::FromArgb(255, 255, 255, 255)
-    $whitePen = New-Object System.Drawing.Pen $whiteColor, $strokeWidth
-    $whitePen.StartCap = [System.Drawing.Drawing2D.LineCap]::Round
-    $whitePen.EndCap = [System.Drawing.Drawing2D.LineCap]::Round
+    # Letter Stroke Pens
+    $strokeWidth = [Math]::Max(2.5, 48.0 * $scale)
 
     $roseColor = [System.Drawing.Color]::FromArgb(255, 251, 113, 133)
     $rosePen = New-Object System.Drawing.Pen $roseColor, $strokeWidth
     $rosePen.StartCap = [System.Drawing.Drawing2D.LineCap]::Round
     $rosePen.EndCap = [System.Drawing.Drawing2D.LineCap]::Round
 
-    # Monogram "T"
-    # Crossbar
-    $g.DrawLine($whitePen, [float](108 * $scale), [float](205 * $scale), [float](248 * $scale), [float](205 * $scale))
-    # Stem
-    $g.DrawLine($whitePen, [float](178 * $scale), [float](205 * $scale), [float](178 * $scale), [float](385 * $scale))
+    $whiteColor = [System.Drawing.Color]::FromArgb(255, 255, 255, 255)
+    $whitePen = New-Object System.Drawing.Pen $whiteColor, $strokeWidth
+    $whitePen.StartCap = [System.Drawing.Drawing2D.LineCap]::Round
+    $whitePen.EndCap = [System.Drawing.Drawing2D.LineCap]::Round
 
-    # Monogram "N"
-    # Left Stem
-    $g.DrawLine($whitePen, [float](276 * $scale), [float](385 * $scale), [float](276 * $scale), [float](205 * $scale))
-    # Diagonal Slash (Rose Accent)
-    $g.DrawLine($rosePen, [float](276 * $scale), [float](205 * $scale), [float](404 * $scale), [float](385 * $scale))
-    # Right Stem (Rose Accent)
-    $g.DrawLine($rosePen, [float](404 * $scale), [float](385 * $scale), [float](404 * $scale), [float](205 * $scale))
+    # --- UNIFIED T & N COMBINATION ---
+    # 1. N Diagonal Slash (Rose Gold)
+    $g.DrawLine($rosePen, [float](214 * $scale), [float](160 * $scale), [float](384 * $scale), [float](360 * $scale))
+
+    # 2. N Right Stem (Rose Gold)
+    $g.DrawLine($rosePen, [float](384 * $scale), [float](360 * $scale), [float](384 * $scale), [float](160 * $scale))
+
+    # 3. N Telemetry Node Dot at Top Right
+    $nodeR = [Math]::Max(1.5, 14.0 * $scale)
+    $nodeBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(255, 253, 164, 175))
+    $g.FillEllipse($nodeBrush, [float](384 * $scale - $nodeR), [float](160 * $scale - $nodeR), [float]($nodeR * 2), [float]($nodeR * 2))
+    $nodeBrush.Dispose()
+
+    # 4. T Horizontal Crossbar (Crisp Titanium White, centered over the stem)
+    $g.DrawLine($whitePen, [float](128 * $scale), [float](160 * $scale), [float](300 * $scale), [float](160 * $scale))
+
+    # 5. T Vertical Stem / Shared N Left Stem (Crisp Titanium White)
+    $g.DrawLine($whitePen, [float](214 * $scale), [float](160 * $scale), [float](214 * $scale), [float](360 * $scale))
 
     $whitePen.Dispose()
     $rosePen.Dispose()
@@ -150,7 +125,7 @@ $bmp32.Save((Join-Path $assetsDir "favicon-32x32.png"), [System.Drawing.Imaging.
 $bmp16 = Generate-FaviconBitmap 16
 $bmp16.Save((Join-Path $assetsDir "favicon-16x16.png"), [System.Drawing.Imaging.ImageFormat]::Png)
 
-# Also generate a valid .ico file from the 32x32 bitmap
+# Generate .ico file from the 32x32 bitmap
 $hIcon = $bmp32.GetHicon()
 $icon = [System.Drawing.Icon]::FromHandle($hIcon)
 $icoStream = [System.IO.File]::Create((Join-Path $baseDir "favicon.ico"))
@@ -158,4 +133,4 @@ $icon.Save($icoStream)
 $icoStream.Close()
 $icon.Dispose()
 
-Write-Output "Successfully generated all favicon assets: SVG, PNGs (16, 32, 180, 192, 512), and ICO!"
+Write-Output "Successfully generated unified T+N combination favicon assets across all formats!"
