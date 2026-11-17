@@ -1513,6 +1513,23 @@ img {
   line-height: 1.45;
 }
 
+.cert-verify-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 0.65rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.cert-verify-link:hover {
+  color: var(--accent-purple);
+  transform: translateX(3px);
+}
+
 /* Awards Special Banner */
 .award-banner-card {
   background: linear-gradient(135deg, #FFF1F2 0%, #FAF5FF 50%, #FFFBEB 100%);

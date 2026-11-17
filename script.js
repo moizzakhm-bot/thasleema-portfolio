@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   • Name: Thasleema Nasreen
   • Role: DevOps Engineer / Cloud & Infrastructure Specialist
   • Location: Dubai, United Arab Emirates
+  • Academic Record: CGPA 8.15 / 10.0 (B.E. Computer Science, IoT & Cyber Security)
   • Experience: 3 Industry Internships (DevOps, Full-Stack, Generative AI)
   • Work Authorization: Immediate Joiner (Open to UAE & Global Remote Roles)
   • Mindset: Continuous Learner, 99.99% Uptime Advocate, Solution-Oriented`,
@@ -153,17 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
     'awards': `<span class="t-accent">HONORS & CERTIFICATIONS:</span>
   🏆 1st Prize Jury's Award - Project OMEGA 2025 (24-hour National Hackathon)
   🎖️ Google Cloud Arcade Trooper Milestone - Google Cloud Facilitator Program
-  📜 Microsoft Certified: SC-900 (Security, Compliance & Identity)
-  📜 AWS Educate - Introduction to Cloud
-  📜 IBM - Rapid Development for AI Services
-  📜 Complete Full-Stack Web Development Bootcamp`,
+  📜 Microsoft Certified: SC-900 (Security, Compliance & Identity) &bull; <a href="https://app.certiport.com/portal/?returnurl=%2fportal%2fdesktopdefault.aspx%3ftabid%3d195&roleid=1" target="_blank" class="t-prompt">Verify</a>
+  📜 AWS Educate - Introduction to Cloud &bull; <a href="https://www.credly.com/badges/d480db1c-ca89-437e-8160-c58fdceb1457/" target="_blank" class="t-prompt">Credly Badge</a>
+  📜 IBM - Rapid Development for AI Services &bull; <a href="https://courses.etrain.skillsnetwork.site/certificates/8d1c3e84cc4a41e29daad8de4ce093dd" target="_blank" class="t-prompt">Verify</a>
+  📜 Complete Full-Stack Web Development Bootcamp &bull; <a href="https://www.udemy.com/certificate/UC-cd224220-f061-4ba9-ac4b-192b06ee4230/" target="_blank" class="t-prompt">Udemy</a>`,
 
     'contact': `<span class="t-accent">DIRECT CONTACT DETAILS:</span>
   • Email: <a href="mailto:thasleemanasreen19@gmail.com" class="t-prompt">thasleemanasreen19@gmail.com</a>
   • Phone / WhatsApp: <a href="tel:+971558702460" class="t-prompt">+971 558702460</a>
   • Location: Dubai, United Arab Emirates
-  • GitHub: github.com/Thasleema-Nasreen
-  • LinkedIn: linkedin.com/in/thasleema-nasreen`,
+  • GitHub: <a href="https://github.com/Thasleema-Nasreen" target="_blank" class="t-prompt">github.com/Thasleema-Nasreen</a>
+  • LinkedIn: <a href="https://www.linkedin.com/in/thasleema-nasreen-508a49288" target="_blank" class="t-prompt">linkedin.com/in/thasleema-nasreen-508a49288</a>`,
 
     'clear': '__CLEAR__'
   };
