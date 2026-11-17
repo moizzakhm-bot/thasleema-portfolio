@@ -852,6 +852,47 @@ img {
   transform: translateY(-1px);
 }
 
+.skill-focus-box {
+  background: #F8FAFC;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.focus-title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.skill-focus-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skill-focus-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.skill-focus-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--accent-emerald);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 .competency-bars {
   display: flex;
   flex-direction: column;

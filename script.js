@@ -89,13 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const commands = {
     'help': `Available commands:
-  • <span class="t-accent">cv</span>        : View and download original uploaded PDF resume
-  • <span class="t-accent">status</span>    : View current availability, location & visa status
-  • <span class="t-accent">skills</span>    : Display cloud & DevOps technical competencies
-  • <span class="t-accent">deploy</span>    : Simulate an automated Terraform + Docker deployment
-  • <span class="t-accent">awards</span>    : View hackathon achievements & certifications
-  • <span class="t-accent">contact</span>   : Quick contact info & direct communication
-  • <span class="t-accent">clear</span>     : Clear the terminal console`,
+  • <span class="t-accent">cv</span>         : View and download original uploaded PDF resume
+  • <span class="t-accent">status</span>     : View current availability, location & visa status
+  • <span class="t-accent">experience</span> : View 3 industry internships & engineering impact
+  • <span class="t-accent">skills</span>     : Display cloud & DevOps technical competencies
+  • <span class="t-accent">deploy</span>     : Simulate an automated Terraform + Docker deployment
+  • <span class="t-accent">awards</span>     : View hackathon achievements & certifications
+  • <span class="t-accent">contact</span>    : Quick contact info & direct communication
+  • <span class="t-accent">clear</span>      : Clear the terminal console`,
 
     'cv': `<span class="t-success">[ORIGINAL RESUME ATTACHED]</span>
   📄 File: Thasleema_Nasreen_DevOps_Resume.pdf
@@ -109,8 +110,25 @@ document.addEventListener('DOMContentLoaded', () => {
   • Name: Thasleema Nasreen
   • Role: DevOps Engineer / Cloud & Infrastructure Specialist
   • Location: Dubai, United Arab Emirates
+  • Experience: 3 Industry Internships (DevOps, Full-Stack, Generative AI)
   • Work Authorization: Immediate Joiner (Open to UAE & Global Remote Roles)
   • Mindset: Continuous Learner, 99.99% Uptime Advocate, Solution-Oriented`,
+
+    'experience': `<span class="t-accent">INDUSTRY EXPERIENCE (3 INTERNSHIPS):</span>
+  1. <span class="t-prompt">DevOps Intern</span> @ Pace Wisdom Solutions (04/2026 – 07/2026)
+     • Nginx reverse proxies, load balancing & Docker automation
+  2. <span class="t-prompt">Web Developer Intern</span> @ Unlox Academy (03/2026 – 05/2026)
+     • Full-stack React.js feature development & REST API database integration
+  3. <span class="t-prompt">Gen AI Intern</span> @ Learner’s Byte (01/2026 – 03/2026)
+     • AI agent workflows (LangChain, n8n) & LLM prompt engineering (ChatGPT, Claude, Gemini)`,
+
+    'exp': `<span class="t-accent">INDUSTRY EXPERIENCE (3 INTERNSHIPS):</span>
+  1. <span class="t-prompt">DevOps Intern</span> @ Pace Wisdom Solutions (04/2026 – 07/2026)
+     • Nginx reverse proxies, load balancing & Docker automation
+  2. <span class="t-prompt">Web Developer Intern</span> @ Unlox Academy (03/2026 – 05/2026)
+     • Full-stack React.js feature development & REST API database integration
+  3. <span class="t-prompt">Gen AI Intern</span> @ Learner’s Byte (01/2026 – 03/2026)
+     • AI agent workflows (LangChain, n8n) & LLM prompt engineering (ChatGPT, Claude, Gemini)`,
 
     'skills': `<span class="t-accent">CLOUD & DEVOPS STACK:</span>
   • Cloud: AWS (VPC, EC2, S3, RDS, ALB, ASG, IAM, Route53, CloudWatch), GCP
