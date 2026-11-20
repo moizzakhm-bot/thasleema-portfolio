@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   🏆 1st Prize Jury's Award - Project OMEGA 2025 (24-hour National Hackathon)
   🎖️ Google Cloud Arcade Trooper Milestone - Google Cloud Facilitator Program
   📜 Microsoft Certified: SC-900 (Security, Compliance & Identity) &bull; <a href="https://app.certiport.com/portal/?returnurl=%2fportal%2fdesktopdefault.aspx%3ftabid%3d195&roleid=1" target="_blank" class="t-prompt">Verify</a>
-  📜 AWS Educate - Introduction to Cloud &bull; <a href="https://www.credly.com/badges/d480db1c-ca89-437e-8160-c58fdceb1457/" target="_blank" class="t-prompt">Credly Badge</a>
+  📜 Build Infrastructure with Terraform on Google Cloud &bull; <a href="https://www.skills.google/public_profiles/cc4f77b1-4eec-45d9-9b24-a2de29ca9db0/badges/16254879" target="_blank" class="t-prompt">Google Cloud Badge</a>
   📜 IBM - Rapid Development for AI Services &bull; <a href="https://courses.etrain.skillsnetwork.site/certificates/8d1c3e84cc4a41e29daad8de4ce093dd" target="_blank" class="t-prompt">Verify</a>
   📜 Complete Full-Stack Web Development Bootcamp &bull; <a href="https://www.udemy.com/certificate/UC-cd224220-f061-4ba9-ac4b-192b06ee4230/" target="_blank" class="t-prompt">Udemy</a>`,
 
